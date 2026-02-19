@@ -3,7 +3,7 @@
 # ---- SIGNAL TRAP ----
 cleanup_on_interrupt() {
     echo ""
-    echo "⚠️  Script interrupted! Archiving current state..."
+    echo "Script interrupted! Archiving current state..."
 
     if [ -d "$PROJECT_DIR" ]; then
         tar -czf "${PROJECT_DIR}_archive.tar.gz" "$PROJECT_DIR"
@@ -126,7 +126,7 @@ if [[ "$UPDATE_CHOICE" == "y" || "$UPDATE_CHOICE" == "Y" ]]; then
         sed -i "s/\"failure\": [0-9]*/\"failure\": $FAILURE/" "$PROJECT_DIR/Helpers/config.json"
         echo "Thresholds updated successfully."
     else
-        echo "⚠️ Invalid input detected. Keeping default values."
+        echo "Invalid input detected. Keeping default values."
     fi
 fi
 
@@ -136,7 +136,7 @@ echo "Running Environment Health Check..."
 if python3 --version >/dev/null 2>&1; then
     echo "Python3 is installed."
 else
-    echo "⚠️ Python3 is NOT installed. Please install it before running the application."
+    echo "Python3 is NOT installed. Please install it before running the application."
 fi
 
 # Verify structure
