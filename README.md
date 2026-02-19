@@ -171,16 +171,3 @@ Environment validation
 
 Version control using Git
 
-# Video Walkthrough
-
-A run-through video is included in the submission explaining:
-
-Script logic
-
-Directory automation
-
-Dynamic configuration
-
-Signal trap demonstration
-
-Health check process
